@@ -1,0 +1,10 @@
+.card {
+    width: 20%;
+    display: flex;
+    float: left;
+    margin: 2% 1%;
+}
+
+.card img {
+    width: 100%;
+}

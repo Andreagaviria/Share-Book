@@ -1,0 +1,10 @@
+<app-flat-icon [icon]="'x'" [pathUrl]="'/'"></app-flat-icon>
+<h3>Add a new book</h3>
+<form (submit)="onSubmit()" class="book-form">
+    <input [(ngModel)]="name" name="name" type="text" placeholder="Add name"/>
+    <input [(ngModel)]="author"  name="author" type="text" placeholder="Add author"/>
+    <input  [(ngModel)]="imageUrl" name="imageUrl" type="text" placeholder="Add url image"/>
+    <textarea [(ngModel)]="description" name="description" placeholder="Add description"></textarea>
+    <button type="submit">Add new book</button>
+</form>
+
