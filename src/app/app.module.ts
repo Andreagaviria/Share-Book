@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../app/shared/shared.module'
 import { AppRoutingModule } from './app-routing.module';
 import { BookModule } from './book/book.module';
+import { AngularFireModule } from '@angular/fire'
+import { environment } from '../environments/environment'
 
 
 import { AppComponent } from './app.component';
@@ -16,7 +18,9 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent
   ],
-  imports: [BrowserModule, AppRoutingModule,  SharedModule, BookModule],
+  imports: [BrowserModule, AppRoutingModule,  SharedModule, BookModule, 
+    AngularFireModule.initializeApp(environment.firebase)
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

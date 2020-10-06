@@ -20,9 +20,11 @@ export class BookListComponent implements OnInit {
   constructor(private bookManagerServiceService: BooksManagerServiceService) {}
 
   ngOnInit(): void {
-    this.bookList = this.bookManagerServiceService.getBookList();
+    // this.bookList = this.bookManagerServiceService.getBookList();
 
-    this.bookManagerServiceService.bookList.subscribe(books => console.log(books));
+    this.bookManagerServiceService.bookList$.subscribe(books => {
+      this.bookList=books;
+    });
     this.observables();
     this.operators();
   }
